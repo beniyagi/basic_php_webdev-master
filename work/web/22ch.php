@@ -13,18 +13,19 @@
 <body>
   <?php
 
-  $json = file_get_contents("posts.json");
+$POSTS_FILE_NAME = "data.json";
+$data = file_get_contents($POSTS_FILE_NAME);
+$posts = json_decode($data);
 
-  $posts = json_decode($json, true);
-  print_r($posts);
-
-  foreach ($posts as $post) {
-    echo "<div class ='card'>";
-    echo "<div class ='dttm'>" . $post["date"] . "</br></div>";
-    echo "<div class ='post'>" . $post["post"] . "</br></div>";
-    echo "</div>";
+foreach($posts as $post) {
+  echo "<div class ='card'>";
+  echo "<div class ='dttm'>" . $post->date . "</br></div>";
+  echo "<div class ='post'>" . $post->post . "</br></div>";
+  echo "</div>";
   }
+
   ?>
+  <!-- <h3>以上がポストです</h3> -->
 </body>
 
 </html>
