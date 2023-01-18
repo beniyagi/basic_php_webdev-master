@@ -13,15 +13,15 @@
 <body>
   <?php
 
-$POSTS_FILE_NAME = "data.json";
-$data = file_get_contents($POSTS_FILE_NAME);
-$posts = json_decode($data);
+  $POSTS_FILE_NAME = "data.json";
+  $data = file_get_contents($POSTS_FILE_NAME);
+  $posts = json_decode($data);
 
-foreach($posts as $post) {
-  echo "<div class ='card'>";
-  echo "<div class ='dttm'>" . $post->date . "</br></div>";
-  echo "<div class ='post'>" . $post->post . "</br></div>";
-  echo "</div>";
+  foreach ($posts as $post) {
+    echo "<div class ='card'>";
+    echo "<div class ='dttm'>" . $post->date . "</br></div>";
+    echo "<div class ='post'>" . $post->post . "</br></div>";
+    echo "</div>";
   }
 
   ?>
