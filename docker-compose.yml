@@ -5,10 +5,6 @@ services:
   php:
     build: ./php
     ports:
-<<<<<<< HEAD
-    - 6969:8000
-=======
       - 6969:8000
->>>>>>> a029a4d19e42593f6f834ebd02e735dd3705f623
     volumes:
       - ./work:/work
